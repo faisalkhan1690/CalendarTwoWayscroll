@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Theme colors-->
+    <color name="colorPrimary">#0CB7E6</color>
+    <color name="colorPrimaryDark">#089AC2</color>
+    <color name="colorAccent">#949499</color>
+
+    <!--style guide-->
+    <color name="fontPrimary100">#FF0c1e37</color>
+    <color name="fontPrimary80">#CC0c1e37</color>
+    <color name="fontPrimary70">#B30c1e37</color>
+    <color name="fontPrimary60">#990c1e37</color>
+    <color name="fontPrimary50">#800c1e37</color>
+    <color name="fontPrimary40">#660c1e37</color>
+    <color name="fontPrimary20">#330c1e37</color>
+    <color name="fontPrimary10">#1A0c1e37</color>
+
+    <color name="fontSecondary100">#FFFFFFFF</color>
+    <color name="fontSecondary80">#CCFFFFFF</color>
+    <color name="fontSecondary60">#99FFFFFF</color>
+    <color name="fontSecondary50">#80FFFFFF</color>
+    <color name="fontSecondary40">#66FFFFFF</color>
+    <color name="fontSecondary20">#33FFFFFF</color>
+    <color name="fontSecondary10">#1AFFFFFF</color>
+
+    <color name="fontOrange">#f9a647</color>
+    <color name="fontBlue">#0cb7e6</color>
+    <color name="fontGray">#919499</color>
+    <color name="fontYellow">#ffd55b</color>
+
+    <color name="fontGrayLight100">#FF09344d</color>
+    <color name="fontGrayLight60">#9909344d</color>
+    <color name="fontGrayLight50">#8009344d</color>
+    <color name="fontGrayLight30">#4D09344d</color>
+
+    <color name="fontRed100">#FFf13928</color>
+    <color name="fontRed80">#CCf13928</color>
+
+    <color name="borderGray">#cad2d8</color>
+    <color name="borderRed">#f13928</color>
+
+    <color name="orangeBackground">#f8992d</color>
+    <color name="greenBackground">#39a200</color>
+    <color name="yellowBackground">#ffd55b</color>
+    <color name="pinkBackground50">#80e5dfdf</color>
+    <color name="white">#FFFFFF</color>
+    <color name="screenBackground">#FFFFFF</color>
+    <color name="transparentBackground">#0DFFFFFF</color>
+    <color name="transparentBlack_50">#8C000000</color>
+    <color name="transparentBlack_75">#CC000000</color>
+    <color name="darkBlue">#3b5998</color>
+    <color name="toolbar_bottom">#88333333</color>
+    <color name="backgroundGray">#cad2d8</color>
+    <color name="backgroundPrimary">#0CB7E6</color>
+
+    <color name="calendarBackground">#dfe4e8</color>
+    <color name="calendarBlueHeader">#0ba8d3</color>
+
+
+
+</resources>

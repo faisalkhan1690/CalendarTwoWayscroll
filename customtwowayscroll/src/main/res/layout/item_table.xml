@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calendarBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin1dp"
+        android:background="@drawable/itembg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/CustomTextViewGray"
+            android:text="1"
+            android:textColor="@color/orangeBackground"
+            android:textSize="@dimen/font12dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"/>
+        <TextView
+            android:id="@+id/tv_selected"
+            style="@style/CustomTextViewGray"
+            android:textColor="@color/fontSecondary100"
+            android:textSize="@dimen/font8dp"
+            android:text="Selected"
+            android:visibility="gone"
+            android:gravity="center" />
+    </LinearLayout>
+
+</LinearLayout>
