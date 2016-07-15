@@ -3,15 +3,17 @@ package co.faisal.calendartwowayscroll;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import co.faisal.customtwowayscroll.BaseTableAdapter;
 import co.faisal.customtwowayscroll.CustomTableAdapter;
+import co.faisal.customtwowayscroll.ICallback;
 import co.faisal.customtwowayscroll.TableFixHeaders;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ICallback {
 
     private List<String[]> list;
     private ArrayList<String> headers;
@@ -29,12 +31,12 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int itemHW = (displaymetrics.widthPixels*15)/100;
         int headerH = (displaymetrics.widthPixels*10)/100;
-        BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,headerH,itemHW);
+        BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,headerH,itemHW,this);
         tableFixHeaders.setAdapter(baseTableAdapter);
     }
 
     private void preparedata() {
-        headers=new ArrayList<String>();
+        headers= new ArrayList<>();
         headers.add("");
         headers.add("2BR");
         headers.add("1SK");
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         headers.add("HUS");
         headers.add("KKL");
 
-        list=new ArrayList<String[]>();
+        list= new ArrayList<>();
         list.add(new String[]{"1","AVL","WL","NE","NE","AVL","AVL","AVL"});
         list.add(new String[]{"2","AVL","WL","NE","NE","AVL","AVL","AVL"});
         list.add(new String[]{"3","AVL","WL","NE","NE","AVL","AVL","AVL"});
@@ -68,5 +70,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onClick(String date) {
+        Toast.makeText(MainActivity.this, date, Toast.LENGTH_SHORT).show();
     }
 }

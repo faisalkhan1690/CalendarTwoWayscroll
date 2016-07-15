@@ -20,14 +20,16 @@ public class CustomTableAdapter extends BaseTableAdapter {
     private ArrayList<String> headers;
     private int itemHW;
     private int headerH;
+    private ICallback iCallback;
 
-    public CustomTableAdapter(Context context,List<String[]> list,ArrayList<String> headers,int headerH,int itemHW) {
+    public CustomTableAdapter(Context context,List<String[]> list,ArrayList<String> headers,int headerH,int itemHW,ICallback iCallback) {
 
         this.context=context;
         this.list=list;
         this.headers=headers;
         this.itemHW=itemHW;
         this.headerH=headerH;
+        this.iCallback=iCallback;
     }
 
     @Override
@@ -88,12 +90,21 @@ public class CustomTableAdapter extends BaseTableAdapter {
         return convertView;
     }
 
-    private View getBody(int row, int column, View convertView, ViewGroup parent) {
+    private View getBody(final int row, final int column, View convertView, ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item_table, parent, false);
         }
         ((TextView) convertView.findViewById(R.id.tv_status)).setText(list.get(row)[column + 1]);
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(iCallback!=null){
+                    iCallback.onClick(list.get(row)[column + 1]);
+                }
+            }
+        });
+
         return convertView;
     }
 
