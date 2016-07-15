@@ -1,4 +1,4 @@
-package co.clubmahindra.calendartwowayscroll;
+package co.faisal.calendartwowayscroll;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,9 @@ import android.util.DisplayMetrics;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.clubmahindra.customtwowayscroll.BaseTableAdapter;
-import co.clubmahindra.customtwowayscroll.CustomTableAdapter;
-import co.clubmahindra.customtwowayscroll.TableFixHeaders;
+import co.faisal.customtwowayscroll.BaseTableAdapter;
+import co.faisal.customtwowayscroll.CustomTableAdapter;
+import co.faisal.customtwowayscroll.TableFixHeaders;
 
 public class MainActivity extends AppCompatActivity {
 

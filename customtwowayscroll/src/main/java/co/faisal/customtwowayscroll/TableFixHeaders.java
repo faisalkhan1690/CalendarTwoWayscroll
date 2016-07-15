@@ -1,4 +1,4 @@
-package co.clubmahindra.customtwowayscroll;
+package co.faisal.customtwowayscroll;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;

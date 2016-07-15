@@ -1,4 +1,4 @@
-package co.clubmahindra.customtwowayscroll;
+package co.faisal.customtwowayscroll;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

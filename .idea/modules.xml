@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CalendarTwoWayscroll.iml" filepath="$PROJECT_DIR$/CalendarTwoWayscroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CalendarTwoWayscroll1.iml" filepath="$PROJECT_DIR$/CalendarTwoWayscroll1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/customtwowayscroll/customtwowayscroll.iml" filepath="$PROJECT_DIR$/customtwowayscroll/customtwowayscroll.iml" />
     </modules>

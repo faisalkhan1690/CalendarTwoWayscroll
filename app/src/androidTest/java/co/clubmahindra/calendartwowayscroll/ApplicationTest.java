@@ -1,4 +1,4 @@
-package co.clubmahindra.calendartwowayscroll;
+package co.faisal.calendartwowayscroll;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

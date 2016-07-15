@@ -1,4 +1,4 @@
-package co.clubmahindra.calendartwowayscroll;
+package co.faisal.calendartwowayscroll;
 
 import org.junit.Test;
 
