@@ -1,7 +1,7 @@
 CalendarTwoWayscroll
 ===================================
 
->Cuatom View like grid that is scrollable in both direction.
+>Custom View like grid that is scrollable in both direction.
 
 
 How to use
@@ -51,8 +51,7 @@ list.add(new String[]{"19","AVL","WL","NE","NE","AVL","AVL","AVL"});
 list.add(new String[]{"20", "AVL", "WL", "NE", "NE", "AVL", "AVL","AVL"});
 ```
 Then create adapter an use  
-   
-Set in parent of your layout 
+
 ```java
 TableFixHeaders tableFixHeaders = (TableFixHeaders) findViewById(R.id.table);
 DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -65,7 +64,7 @@ BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,hea
          Toast.makeText(MainActivity.this, date, Toast.LENGTH_SHORT).show();
       }
    });
-   tableFixHeaders.setAdapter(baseTableAdapter);
+tableFixHeaders.setAdapter(baseTableAdapter);
 ```
 
  
