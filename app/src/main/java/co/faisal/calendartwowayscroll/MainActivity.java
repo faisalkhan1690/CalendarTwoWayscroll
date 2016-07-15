@@ -13,7 +13,7 @@ import co.faisal.customtwowayscroll.CustomTableAdapter;
 import co.faisal.customtwowayscroll.ICallback;
 import co.faisal.customtwowayscroll.TableFixHeaders;
 
-public class MainActivity extends AppCompatActivity implements ICallback {
+public class MainActivity extends AppCompatActivity {
 
     private List<String[]> list;
     private ArrayList<String> headers;
@@ -31,7 +31,12 @@ public class MainActivity extends AppCompatActivity implements ICallback {
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         int itemHW = (displaymetrics.widthPixels*15)/100;
         int headerH = (displaymetrics.widthPixels*10)/100;
-        BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,headerH,itemHW,this);
+        BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,headerH,itemHW, new ICallback() {
+            @Override
+            public void onClick(String date) {
+                Toast.makeText(MainActivity.this, date, Toast.LENGTH_SHORT).show();
+            }
+        });
         tableFixHeaders.setAdapter(baseTableAdapter);
     }
 
@@ -72,8 +77,4 @@ public class MainActivity extends AppCompatActivity implements ICallback {
 
     }
 
-    @Override
-    public void onClick(String date) {
-        Toast.makeText(MainActivity.this, date, Toast.LENGTH_SHORT).show();
-    }
 }
