@@ -1,48 +1,72 @@
 CalendarTwoWayscroll
 ===================================
 
->Cuatom View like grid that is scrollable in both direction.
+>Custom View like grid that is scrollable in both direction.
 
 
 How to use
 --------------
-Set
+Set in your xml 
 ```xml
-android:indeterminateDrawable="@drawable/unselected_star"
-```
-   unselected_star is the unselected drawable
-   
-Set 
-```xml 
-android:progressDrawable="@drawable/rating_stars"
-```
-   rating_stars is the selector drawable
-   
-Set in parent of your layout 
-```xml 
-xmlns:rating_bar_custom="http://schemas.android.com/apk/res-auto"
+ <co.faisal.customtwowayscroll.TableFixHeaders
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:background="@color/backgroundGray"
+        android:layout_height="match_parent" />
 ```
    
-Set number of stars in 
-```xml 
-rating_bar_custom:customNumStars 
-``` 
-instead of  
-```xml 
-android:numStars 
+   
+then initialized data list 
+```java 
+List <String >headers= new ArrayList<>();
+headers.add("");
+headers.add("2BR");
+headers.add("1SK");
+headers.add("1BR");
+headers.add("STU");
+headers.add("HU");
+headers.add("HUS");
+headers.add("KKL");
+
+List<String > list= new ArrayList<>();
+list.add(new String[]{"1","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"2","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"3","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"4","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"5","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"6","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"7","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"8","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"9", "AVL", "WL", "NE", "NE", "AVL", "AVL","AVL"});
+list.add(new String[]{"10", "AVL", "WL", "NE", "NE", "AVL", "AVL","AVL"});
+list.add(new String[]{"11","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"12","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"13","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"14","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"15","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"16","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"17","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"18","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"19","AVL","WL","NE","NE","AVL","AVL","AVL"});
+list.add(new String[]{"20", "AVL", "WL", "NE", "NE", "AVL", "AVL","AVL"});
+```
+Then create adapter an use  
+
+```java
+TableFixHeaders tableFixHeaders = (TableFixHeaders) findViewById(R.id.table);
+DisplayMetrics displaymetrics = new DisplayMetrics();
+getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+int itemHW = (displaymetrics.widthPixels*15)/100;
+int headerH = (displaymetrics.widthPixels*10)/100;
+BaseTableAdapter baseTableAdapter = new CustomTableAdapter(this,list,headers,headerH,itemHW, new ICallback() {
+   @Override
+   public void onClick(String date) {
+         Toast.makeText(MainActivity.this, date, Toast.LENGTH_SHORT).show();
+      }
+   });
+tableFixHeaders.setAdapter(baseTableAdapter);
 ```
 
-Example 
---------------
-```xml
- <com.example.faisalkhan.customratingbarlib.RatingBarCustom
-      android:id="@+id/rating_bar_custom"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:indeterminateDrawable="@drawable/unselected_star"
-      android:progressDrawable="@drawable/rating_stars"
-      rating_bar_custom:customNumStars="5" />
-```
  
 Screenshots
 --------------
